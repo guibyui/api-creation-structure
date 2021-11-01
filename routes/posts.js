@@ -1,10 +1,8 @@
 const express = require("express");
-// const Post = require("../models/Post");
+const Post = require("../models/Post");
 const router = express.Router();
 
 // Create Routes is now enabled
-
-// const Post = require('../models/Post')
 
 // Post
 router.post("/", async (req, res) => {
@@ -16,7 +14,7 @@ router.post("/", async (req, res) => {
 
   try {
     const savedPost = await post.save();
-    res.json(data);
+    res.json(savedPost);
   } catch (err) {
     res.json({ message: err });
   }
