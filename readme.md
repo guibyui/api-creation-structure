@@ -1,0 +1,1 @@
+npm istall express nodemon mongoose dotenv body-parser cors
